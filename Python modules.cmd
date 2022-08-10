@@ -1,0 +1,15 @@
+pip install Pillow
+pip install requests
+pip install pyinstaller
+pip install pygame
+pip install playsound
+pip install numpy
+pip install opencv-contrib-python
+pip install winregistry
+pip install pep8
+pip install apscheduler
+pip install mediapipe
+pip install pycaw
+pip install beautifulsoup4
+pip install pytube
+pip install Flask
