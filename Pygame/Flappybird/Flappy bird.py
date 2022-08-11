@@ -5,15 +5,15 @@ pygame.init()
 
 window = pygame.display.set_mode((300, 400))
 pygame.display.set_caption("Flappy bird")
-icon = pygame.image.load("Data/bird-1.jpg")
+icon = pygame.image.load("E://python-projects/Pygame/Flappybird/Data/bird-1.jpg")
 pygame.display.set_icon(icon)
 
 clock = pygame.time.Clock()
-font = pygame.font.Font('Data/flappybird.ttf', 30)
+font = pygame.font.Font('E://python-projects/Pygame/Flappybird/Data/flappybird.ttf', 30)
 
-bird_1_img = pygame.image.load("Data/bird-1.jpg")
-bird_2_img = pygame.image.load("Data/bird-2.jpg")
-background_img = pygame.image.load("Data/background.jpg")
+bird_1_img = pygame.image.load("E://python-projects/Pygame/Flappybird/Data/bird-1.jpg")
+bird_2_img = pygame.image.load("E://python-projects/Pygame/Flappybird/Data/bird-2.jpg")
+background_img = pygame.image.load("E://python-projects/Pygame/Flappybird/Data/background.jpg")
 
 
 def rot_center(image, angle):

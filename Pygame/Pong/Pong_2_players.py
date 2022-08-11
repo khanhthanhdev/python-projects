@@ -10,7 +10,7 @@ window = pygame.display.set_mode((800, 500))
 pygame.display.set_caption("Pong")
 clock = pygame.time.Clock()
 font = pygame.font.Font('freesansbold.ttf', 20)
-background_music = mixer.music.load("Data/background.wav")
+background_music = mixer.music.load("E://python-projects/Pygame/Pong/Data/background.wav")
 mixer.music.play(-1)
 
 
@@ -69,11 +69,11 @@ class ball_object(object):
             if self.y - 10 < 0:
                 self.y = 10
                 self.dy = -self.dy
-                playsound("Data/bounce.wav", False)
+                playsound("E://python-projects/Pygame/Pong/Data/bounce.wav", False)
             elif self.y + 10 > 500:
                 self.y = 490
                 self.dy = -self.dy
-                playsound("Data/bounce.wav", False)
+                playsound("E://python-projects/Pygame/Pong/Data/bounce.wav", False)
             elif self.x - 10 < 0:
                 self.x = 400
                 self.y = 250
@@ -82,7 +82,7 @@ class ball_object(object):
                 player2.score += 1
                 self.dx = -self.dx
                 delay = 7
-                playsound("Data/wrong.wav", False)
+                playsound("E://python-projects/Pygame/Pong/Data/wrong.wav", False)
             elif self.x + 10 > 800:
                 self.x = 400
                 self.y = 250
@@ -91,15 +91,15 @@ class ball_object(object):
                 player1.score += 1
                 self.dx = -self.dx
                 delay = 7
-                playsound("Data/right.wav", False)
+                playsound("E://python-projects/Pygame/Pong/Data/right.wav", False)
 
             if self.x > 55 - increament and self.x < 65 and self.y < player1.y + 60 and self.y > player1.y - 60:
                 self.dx = -self.dx
-                playsound("Data/bounce.wav", False)
+                playsound("E://python-projects/Pygame/Pong/Data/bounce.wav", False)
 
             if self.x > 745 and self.x < 750 + increament and self.y < player2.y + 60 and self.y > player2.y - 60:
                 self.dx = -self.dx
-                playsound("Data/bounce.wav", False)
+                playsound("E://python-projects/Pygame/Pong/Data/bounce.wav", False)
 
         self.draw()
 
@@ -158,7 +158,7 @@ while running:
 
 if msg_box:
     if player1.score >= 3:
-        playsound("Data/win.wav", False)
+        playsound("E://python-projects/Pygame/Pong/Data/win.wav", False)
         tk = Tk()
         tk.withdraw()
         messagebox.showinfo("Well done", "Player 1 wins!!!")

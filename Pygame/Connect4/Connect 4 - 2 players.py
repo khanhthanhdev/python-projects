@@ -39,11 +39,14 @@ def draw(board):
     for row in range(len(board)):
         for col in range(len(board[row])):
             if board[row][col] == 0:
-                pygame.draw.circle(window, (0, 0, 0), (col * 60 + 30, row * 60 + 90), 28)
+                pygame.draw.circle(window, (0, 0, 0),
+                                   (col * 60 + 30, row * 60 + 90), 28)
             elif board[row][col] == 1:
-                pygame.draw.circle(window, (255, 0, 0), (col * 60 + 30, row * 60 + 90), 28)
+                pygame.draw.circle(window, (255, 0, 0),
+                                   (col * 60 + 30, row * 60 + 90), 28)
             elif board[row][col] == 2:
-                pygame.draw.circle(window, (255, 255, 0), (col * 60 + 30, row * 60 + 90), 28)
+                pygame.draw.circle(window, (255, 255, 0),
+                                   (col * 60 + 30, row * 60 + 90), 28)
 
 
 def available_col(board, col):
