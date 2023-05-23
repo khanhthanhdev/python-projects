@@ -11,7 +11,7 @@ window = pygame.display.set_mode((500, 500))
 pygame.display.set_caption("Snake senzia")
 clock = pygame.time.Clock()
 font = pygame.font.Font('freesansbold.ttf', 20)
-background_music = mixer.music.load("Data/background.wav")
+background_music = mixer.music.load("Snake Senzia/Data/background.wav")
 mixer.music.play(-1)
 
 
@@ -71,7 +71,7 @@ class head_class(object):
                 score += 1
                 mega_food -= 1
                 food.place()
-                playsound("Data/right.wav", False)
+                playsound("Snake Senzia/Data/right.wav", False)
         else:
             if (food.row == self.row or food.row + 1 == self.row) and (food.column == self.column or food.column + 1 == self.column):
                 length += 2
@@ -79,7 +79,7 @@ class head_class(object):
                 mega_food = 8
                 mega_food_time = 400
                 food.place()
-                playsound("Data/right.wav", False)
+                playsound("Snake Senzia/Data/right.wav", False)
 
         for i in body:
             if self.row == i.row and self.column == i.column:
@@ -229,7 +229,7 @@ while running:
     pygame.display.update()
 
 if msg_box:
-    playsound("Data/lose.wav", False)
+    playsound("Snake Senzia/Data/lose.wav", False)
     tk = Tk()
     tk.withdraw()
     messagebox.showerror("You lose", f"Game over! Your score: {score}")
